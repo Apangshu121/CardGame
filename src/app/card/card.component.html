@@ -1,0 +1,17 @@
+<div class="card-container" style="--cols: {{ cols }}; --rows: {{ rows }}">
+  <!-- [class.matched]="card.matched": This is Angular's property binding. It dynamically adds the "matched" class to the div element if the card.matched property evaluates to true. The [class.matched] syntax binds the presence of the "matched" class to the truthiness of card.matched. -->
+  <div *ngFor="let card of cards" class="card" [class.matched]="card.matched" (click)="flipCard(card)">
+    <div class="card-inner" [class.flipped]="card.flipped">
+      <div class="card-front">
+        <h1>?</h1>
+      </div>
+      <div class="card-back">
+        <img [src]="card.imagePath" alt="Card Image">
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showWinMessage" class="win-message">
+    <p>You Won!</p>
+    <button (click)="goToHomePage()">Play again</button>
+  </div>
+</div>

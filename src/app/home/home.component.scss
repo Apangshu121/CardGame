@@ -1,0 +1,35 @@
+div {
+    text-align: center;
+    margin-top: 50px;
+  
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+  
+    a {
+      text-decoration: none;
+  
+      .card {
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: greenyellow;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #f0f0f0;
+        }
+  
+        h2 {
+          font-size: 1.5em;
+          color: #555;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
